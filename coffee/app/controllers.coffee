@@ -1,3 +1,3 @@
-myApp.controller 'MainAppCtrl', ['$scope', ($scope) ->
+aMarked.controller 'MainAppCtrl', ['$scope', ($scope) ->
   $scope.title = "ng-Bootstrap"
 ]

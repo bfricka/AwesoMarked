@@ -1,7 +1,7 @@
 #@codekit-prepend "../plugins.coffee"
 #import "../plugins.coffee"
 
-myApp = angular.module 'myApp', [] # Create our app
+aMarked = angular.module 'aMarked', [] # Create our app
 
 #@codekit-append "directives.coffee"
 #import "directives.coffee"
