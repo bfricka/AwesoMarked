@@ -1,11 +1,16 @@
 .aMarked-wrap {
   .box-sizing(border-box);
   position: fixed;
+  z-index: 1;
   width: 100%;
   height: 100%;
-  padding-top: 50px;
+  padding-top: 60px;
   padding-bottom: 10px;
   top: 0;
+}
+
+.filename {
+  margin-bottom: 20px;
 }
 
 .side-by-side {
@@ -27,6 +32,7 @@
 .markdown {
   margin-right: 10px;
   textarea {
+    overflow: auto;
     .size(100%, 100%);
     .box-sizing(border-box);
     max-height: 100%;
@@ -35,7 +41,13 @@
   }
 }
 
+.navbar {
+  position: relative;
+  z-index: 2;
+}
+
 .preview {
+  overflow: auto;
   .border-radius(3px);
   padding: 4px 6px;
   border: 1px solid @tableBorder;

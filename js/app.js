@@ -213,16 +213,22 @@ aMarked.controller('MainAppCtrl', [
     var getSavedState, stor;
     $scope.stor = stor = new Stor();
     $scope.title = "ng-Bootstrap";
-    $scope.filename = "Untitled";
     $scope.preview = '';
     getSavedState = (function() {
       var filename, md;
-      md = stor.get('aMarked');
-      filename = stor.get('');
-      return $scope.markdown = md != null ? md : '';
+      md = stor.get('aMarkedMarkdown');
+      filename = stor.get('aMarkedFile');
+      $scope.markdown = md != null ? md : '';
+      return $scope.filename = filename != null ? filename : 'Untitled';
     })();
-    return $scope.$on('markdownChange', function(e, md) {
-      return stor.set('aMarked', md);
+    $scope.editFileName = false;
+    $scope.$on('markdownChange', function(e, md) {
+      return stor.set('aMarkedMarkdown', md);
     });
+    return $scope.updateFilename = function(e) {
+      e.preventDefault();
+      stor.set('aMarkedFile', $scope.filename);
+      return $scope.editFileName = false;
+    };
   }
 ]);

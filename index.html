@@ -48,9 +48,9 @@
           <a class="brand" href="#">AwesoMarked</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
-              <li><a href="#">Save</a></li>
-              <li><a href="#about">Reset</a></li>
-              <li><a href="#contact">Contact</a></li>
+              <li><a href="javascript:" ng-click="editFileName = true">Save As</a></li>
+              <li><a href="javascript:">Reset</a></li>
+              <li><a href="javascript:">Contact</a></li>
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
                 <ul class="dropdown-menu">
@@ -72,8 +72,10 @@
 
     <div class="container-fluid aMarked-wrap" id="wrap">
       <!-- Example row of columns -->
-      <header id="filename" class="filename">
-        <input type="text" placeholder="Enter a document name" ng-model="filename">
+      <header id="filename" class="filename row-fluid" style="display: none;" ng-show="editFileName == true">
+        <div class="input-append">
+          <input class="span5" type="text" placeholder="Enter a document name" ng-model="filename"><input class="btn" ng-click="updateFilename($event)" value="Save" type="submit">
+        </div>
       </header>
       <div class="row-fluid side-by-side">
         <section id="markdown" class="markdown">
