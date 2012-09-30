@@ -10,4 +10,7 @@ aMarked.directive 'markdownPreview', () ->
   restrict: 'A'
   link: (scope, elem, attrs) ->
     scope.$watch 'preview', (els) ->
-      $(elem).empty().append(els)
+      prev = $(elem).empty().append(els)
+      preCode = prev.find('pre')
+      _.each preCode, (code) ->
+        hljs.highlightBlock(code)

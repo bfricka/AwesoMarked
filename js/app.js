@@ -30,10 +30,10 @@ MDProcessor = (function() {
     this.attrs = attrs;
   }
 
-  MDProcessor.prototype.matchers = [
+  MDProcessor.prototype.blockMatchers = [
     {
       tag: "p",
-      exp: /^([^#\*]+)/i
+      exp: /^([^#\*\>\`]+)/i
     }, {
       tag: "h1",
       exp: /^(?:#{1}\s?)([^#]+)/i
@@ -55,45 +55,68 @@ MDProcessor = (function() {
     }, {
       tag: "li",
       exp: /^(?:\*{1}\s?)([^*\r\n]+)/i
+    }, {
+      tag: "blockquote",
+      exp: /^(?:\>{1}\s{1})([^*\r\n]+)/i
+    }, {
+      tag: "pre",
+      exp: /^(?:\`{3,})(\w+)(?:[\r\n]{1})?([^`{3,}]+)/i
     }
   ];
 
   MDProcessor.prototype.process = function(md) {
-    var lines, output, self;
+    var blocks, output, self;
     self = this;
-    lines = md.split(/\n/gi);
+    blocks = md.split(/(?:\r{2,}|\n{2,})/gi);
     output = [];
-    _.each(lines, function(line) {
+    _.each(blocks, function(block) {
       var markupMatches;
-      if (line != null) {
-        markupMatches = _.filter(self.matchers, function(matcher) {
-          return matcher.exp.test(line) === true;
+      if (block != null) {
+        markupMatches = _.filter(self.blockMatchers, function(matcher) {
+          return matcher.exp.test(block) === true;
         });
         if ((markupMatches != null) && markupMatches.length) {
           return _.each(markupMatches, function(matcher) {
             var el, exp, tag;
             tag = matcher.tag;
             exp = matcher.exp;
-            el = self.buildElement(tag, exp, line);
+            el = self.buildElement(tag, exp, block);
             return output.push(el);
           });
         }
       }
     });
-    window.op = output;
+    window.op = blocks;
     self.needsParent(output);
     this.scope.preview = output;
-    return console.log(lines);
+    console.log("Blocks:");
+    return console.log(blocks);
   };
 
   MDProcessor.prototype.buildElement = function(tag, exp, line) {
-    var content, d, el, txt;
+    var code, codeType, content, d, el, match, txt;
     d = document;
-    content = line.match(exp)[1];
-    txt = d.createTextNode(content);
-    el = d.createElement(tag);
-    el.appendChild(txt);
-    return el;
+    switch (tag) {
+      case 'pre':
+        match = line.match(exp);
+        content = match[2];
+        codeType = match[1];
+        txt = d.createTextNode(content);
+        code = d.createElement('code');
+        code.className = codeType;
+        code.appendChild(txt);
+        el = d.createElement(tag);
+        el.appendChild(code);
+        return el;
+      case 'placehold':
+        break;
+      default:
+        content = line.match(exp)[1];
+        txt = d.createTextNode(content);
+        el = d.createElement(tag);
+        el.appendChild(txt);
+        return el;
+    }
   };
 
   MDProcessor.prototype.needsParent = function(output) {
@@ -184,7 +207,12 @@ aMarked.directive('markdownPreview', function() {
     restrict: 'A',
     link: function(scope, elem, attrs) {
       return scope.$watch('preview', function(els) {
-        return $(elem).empty().append(els);
+        var preCode, prev;
+        prev = $(elem).empty().append(els);
+        preCode = prev.find('pre');
+        return _.each(preCode, function(code) {
+          return hljs.highlightBlock(code);
+        });
       });
     }
   };
