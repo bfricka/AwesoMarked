@@ -3,6 +3,7 @@ aMarked.directive 'markdownProcessor', () ->
   link: (scope, elem, attrs) ->
     p = new MDProcessor(scope, elem, attrs)
     scope.$watch 'markdown', (md) ->
+      scope.$emit 'markdownChange', md
       p.process(md)
 
 aMarked.directive 'markdownPreview', () ->

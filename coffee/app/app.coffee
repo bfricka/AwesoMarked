@@ -6,6 +6,10 @@ class MDProcessor
 
   matchers: [
       {
+        tag: "p"
+        exp: /^([^#\*]+)/i
+      }
+      {
         tag: "h1"
         exp: /^(?:#{1}\s?)([^#]+)/i
       }
@@ -30,8 +34,8 @@ class MDProcessor
         exp: /^(?:#{6}\s?)([^#]+)/i
       }
       {
-        tag: "ul"
-        exp: /^(?:\*{1}\s?)([^*\r\n]+))/i
+        tag: "li"
+        exp: /^(?:\*{1}\s?)([^*\r\n]+)/i
       }
     ]
 
@@ -47,21 +51,52 @@ class MDProcessor
           _.each markupMatches, (matcher) ->
             tag = matcher.tag
             exp = matcher.exp
-            str = self.buildString(tag, exp, line)
-            output.push str
+            el = self.buildElement(tag, exp, line)
+            output.push el
 
-    console.log(output.join(''))
-    @scope.preview = output.join('')
+    window.op = output
+    self.needsParent(output)
+    @scope.preview = output
     console.log(lines)
 
-  buildString: (tag, exp, line) ->
+  buildElement: (tag, exp, line) ->
+    d = document
     content = line.match(exp)[1]
-    switch tag
-      when 'ul'
-        str = "<#{tag}><li>#{content}</li></#{tag}>"
-      else
-        str = "<#{tag}>#{content}</#{tag}>"
+    txt = d.createTextNode(content)
+    el = d.createElement(tag)
+    el.appendChild(txt)
+    el
 
+  needsParent: (output) ->
+    $els = $(output)
+    els = @jqToArray($els)
+    len = els.length
+    i = 0
+    while i < len
+      el = els[i]
+      tag = el.tagName
+      prev = if i is 0 then '' else els[i-1].tagName
+      next = if i+1 is len then '' else els[i+1].tagName
+      if tag is 'LI'
+        unless prev is 'LI' then
+      i++
+
+  jqToArray: ($els) ->
+    els = []
+    for el in $els
+      els.push el
+    els
+# Just my preferred syntax for working with storage
+# as opposed to the amplify syntax
+class Stor
+  constructor: ->
+    @amp = amplify.store
+  get: (key) ->
+    @amp(key)
+  set: (key, val, exp = null) ->
+    @amp(key, val, exp)
+  del: (key) ->
+    @amp(key, null)
 
 aMarked = angular.module 'aMarked', [] # Create our app
 
