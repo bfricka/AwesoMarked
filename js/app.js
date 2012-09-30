@@ -30,19 +30,67 @@ MDProcessor = (function() {
     this.attrs = attrs;
   }
 
-  MDProcessor.prototype.regexp = {
-    h1: /^(?:#{1}\s?)([^#]+)/gi
-  };
+  MDProcessor.prototype.matchers = [
+    {
+      tag: "h1",
+      exp: /^(?:#{1}\s?)([^#]+)/i
+    }, {
+      tag: "h2",
+      exp: /^(?:#{2}\s?)([^#]+)/i
+    }, {
+      tag: "h3",
+      exp: /^(?:#{3}\s?)([^#]+)/i
+    }, {
+      tag: "h4",
+      exp: /^(?:#{4}\s?)([^#]+)/i
+    }, {
+      tag: "h5",
+      exp: /^(?:#{5}\s?)([^#]+)/i
+    }, {
+      tag: "h6",
+      exp: /^(?:#{6}\s?)([^#]+)/i
+    }, {
+      tag: "ul",
+      exp: /^(?:\*{1}\s?)([^*\r\n]+))/i
+    }
+  ];
 
   MDProcessor.prototype.process = function(md) {
-    _.each(this.regexp, function(exp) {
-      var match;
-      match = exp.test(md);
-      if (match) {
-        return console.log(md.match(exp));
+    var lines, output, self;
+    self = this;
+    lines = md.split(/\n/gi);
+    output = [];
+    _.each(lines, function(line) {
+      var markupMatches;
+      if (line != null) {
+        markupMatches = _.filter(self.matchers, function(matcher) {
+          return matcher.exp.test(line) === true;
+        });
+        if ((markupMatches != null) && markupMatches.length) {
+          return _.each(markupMatches, function(matcher) {
+            var exp, str, tag;
+            tag = matcher.tag;
+            exp = matcher.exp;
+            str = self.buildString(tag, exp, line);
+            return output.push(str);
+          });
+        }
       }
     });
-    return this.scope.preview = md;
+    console.log(output.join(''));
+    this.scope.preview = output.join('');
+    return console.log(lines);
+  };
+
+  MDProcessor.prototype.buildString = function(tag, exp, line) {
+    var content, str;
+    content = line.match(exp)[1];
+    switch (tag) {
+      case 'ul':
+        return str = "<" + tag + "><li>" + content + "</li></" + tag + ">";
+      default:
+        return str = "<" + tag + ">" + content + "</" + tag + ">";
+    }
   };
 
   return MDProcessor;
@@ -65,6 +113,17 @@ aMarked.directive('markdownProcessor', function() {
       p = new MDProcessor(scope, elem, attrs);
       return scope.$watch('markdown', function(md) {
         return p.process(md);
+      });
+    }
+  };
+});
+
+aMarked.directive('markdownPreview', function() {
+  return {
+    restrict: 'A',
+    link: function(scope, elem, attrs) {
+      return scope.$watch('preview', function(els) {
+        return $(elem).empty().append(els);
       });
     }
   };
