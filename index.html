@@ -60,6 +60,7 @@
                   <li><a href="#">One more separated link</a></li>
                 </ul>
               </li>
+              <li><a href="#" ng-bind-template="Editing: {{filename}}">Editing:</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -68,15 +69,15 @@
 
     <div class="container-fluid aMarked-wrap" id="wrap">
       <!-- Example row of columns -->
-      <header id="filename" class="filename" ng-model="filename">
-        <input type="text" placeholder="Untitled Document">
+      <header id="filename" class="filename">
+        <input type="text" placeholder="Enter a document name" ng-model="filename">
       </header>
       <div class="row-fluid side-by-side">
         <section id="markdown" class="markdown">
-          <textarea ng-model="markdown"></textarea>
+          <textarea ng-model="markdown" markdown-processor></textarea>
         </section>
         <section id="preview" class="preview">
-          <article ng-bind-template="{{markdown}}"></article>
+          <article ng-bind-template="{{preview}}"></article>
         </section>
       </div>
     </div> <!-- /container -->
