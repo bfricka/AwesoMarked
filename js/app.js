@@ -60,14 +60,14 @@ MDProcessor = (function() {
       exp: /^(?:\>{1}\s{1})([^*\r\n]+)/i
     }, {
       tag: "pre",
-      exp: /^(?:\`{3,})(\w+)(?:[\r\n]{1})?([^`{3,}]+)/i
+      exp: /^(?:\`{3,})(\w+)(?:[\r\n]{1})?([^`]+)/im
     }
   ];
 
   MDProcessor.prototype.process = function(md) {
     var blocks, output, self;
     self = this;
-    blocks = md.split(/(?:\r{2,}|\n{2,})/gi);
+    blocks = self.createBlocks(md);
     output = [];
     _.each(blocks, function(block) {
       var markupMatches;
@@ -91,6 +91,26 @@ MDProcessor = (function() {
     this.scope.preview = output;
     console.log("Blocks:");
     return console.log(blocks);
+  };
+
+  MDProcessor.prototype.createBlocks = function(md) {
+    var blockExp, blocks, codeBlockExp, newBlocks, self;
+    self = this;
+    codeBlockExp = /^(\`{3,}\w+[\r\n]{1}?[^`]+\`{3,})/im;
+    blockExp = /(?:\r{2,}|\n{2,})/gi;
+    blocks = md.split(codeBlockExp);
+    newBlocks = [];
+    _.each(blocks, function(block) {
+      var arr, match;
+      match = codeBlockExp.test(block);
+      if (match === true) {
+        newBlocks.push(block);
+      } else {
+        arr = block.split(blockExp);
+        newBlocks = newBlocks.concat(arr);
+      }
+    });
+    return newBlocks;
   };
 
   MDProcessor.prototype.buildElement = function(tag, exp, line) {

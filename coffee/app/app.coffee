@@ -14,13 +14,12 @@ class MDProcessor
     {tag : "h6", exp: /^(?:#{6}\s?)([^#]+)/i }
     {tag : "li", exp: /^(?:\*{1}\s?)([^*\r\n]+)/i }
     {tag : "blockquote", exp: /^(?:\>{1}\s{1})([^*\r\n]+)/i }
-    {tag : "pre", exp: /^(?:\`{3,})(\w+)(?:[\r\n]{1})?([^`{3,}]+)/i}
+    {tag : "pre", exp: /^(?:\`{3,})(\w+)(?:[\r\n]{1})?([^`]+)/im }
   ]
 
   process: (md) ->
     self   = @
-    blocks = md.split /(?:\r{2,}|\n{2,})/gi
-    # lines  = md.split /\n/gi
+    blocks = self.createBlocks(md)
     output = []
     _.each blocks, (block) ->
       if block?
@@ -40,6 +39,24 @@ class MDProcessor
     console.log(blocks)
     # console.log("Lines:")
     # console.log(lines)
+
+  # Need to separate out our code blocks first so we are able to
+  # preserve line-breaks in pre tags
+  createBlocks: (md) ->
+    self = @
+    codeBlockExp = /^(\`{3,}\w+[\r\n]{1}?[^`]+\`{3,})/im
+    blockExp = /(?:\r{2,}|\n{2,})/gi
+    blocks = md.split(codeBlockExp)
+    newBlocks = []
+    _.each blocks, (block) ->
+      match = codeBlockExp.test(block)
+      if match is true # Look for fenced blocks
+        newBlocks.push(block) # Push them intact
+      else # Otherwise, split by blocks
+        arr = block.split(blockExp)
+        newBlocks = newBlocks.concat(arr) # Concat split to new array
+      return
+    newBlocks
 
   buildElement: (tag, exp, line) ->
     d = document
