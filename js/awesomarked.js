@@ -395,16 +395,24 @@ aMarked.directive('fadeShow', function() {
 
 aMarked.directive('stickyScroll', function() {
   return function(scope, elem, attrs) {
-    var $elem, exp, scrollItems;
-    $elem = $(elem);
+    var $mdTextarea, $preview, exp, getScrollTop, mdTextarea, preview, scrollItems;
     exp = attrs.stickyScroll;
+    $mdTextarea = $(elem);
+    mdTextarea = $mdTextarea[0];
+    $preview = $('#preview');
+    preview = $preview[0];
+    getScrollTop = function() {
+      var scrollPercent;
+      scrollPercent = mdTextarea.scrollTop / mdTextarea.scrollHeight;
+      return preview.scrollHeight * scrollPercent;
+    };
     scrollItems = function(isEnabled) {
       if (isEnabled) {
-        return $elem.on('scroll', function(e) {
-          return $('#preview').scrollTop(e.target.scrollTop);
+        return $mdTextarea.on('scroll', function(e) {
+          return $('#preview').scrollTop(getScrollTop());
         });
       } else {
-        return $elem.off('scroll');
+        return $mdTextarea.off('scroll');
       }
     };
     scrollItems(scope.$eval(exp));

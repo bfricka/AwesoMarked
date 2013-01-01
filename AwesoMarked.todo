@@ -1,0 +1,22 @@
+Menu:
+
+  File Menu:
+    ☐ New File (ctrl+n)
+    ☐ Save (ctrl+s)
+    ☐ Save As (ctrl+shift+s)
+    ☐ Import?
+    ☐ View Local Files
+    ☐ Connect to Google Drive?
+
+  Options:
+    ☐ Sticky Scroll - Need to fix code quality
+    ☐ Auto-Save
+
+  Edit:
+    Formatting & Style:
+      ☐ Output theme
+      ☐ Syntax Highlighting Theme
+      ☐ Editing format / options
+        ☐ Font-size
+        ☐ Font-Family
+        ☐ Colors
