@@ -362,9 +362,7 @@ aMarked.directive('slideFadeShow', function() {
     slideElem(scope.$eval(exp), true);
     return scope.$watch(function() {
       return scope.$eval(exp);
-    }, function(toShow) {
-      return slideElem(toShow);
-    });
+    }, slideElem);
   };
 });
 
@@ -391,9 +389,28 @@ aMarked.directive('fadeShow', function() {
     fadeElem(scope.$eval(exp), true);
     return scope.$watch(function() {
       return scope.$eval(exp);
-    }, function(toShow) {
-      return fadeElem(toShow);
-    });
+    }, fadeElem);
+  };
+});
+
+aMarked.directive('stickyScroll', function() {
+  return function(scope, elem, attrs) {
+    var $elem, exp, scrollItems;
+    $elem = $(elem);
+    exp = attrs.stickyScroll;
+    scrollItems = function(isEnabled) {
+      if (isEnabled) {
+        return $elem.on('scroll', function(e) {
+          return $('#preview').scrollTop(e.target.scrollTop);
+        });
+      } else {
+        return $elem.off('scroll');
+      }
+    };
+    scrollItems(scope.$eval(exp));
+    return scope.$watch(function() {
+      return scope.$eval(exp);
+    }, scrollItems);
   };
 });
 
@@ -422,6 +439,7 @@ aMarked.controller('MainAppCtrl', [
     $scope.title = "ng-Bootstrap";
     $scope.preview = '';
     $scope.showOptions = false;
+    $scope.stickyScrolling = true;
     getSavedState = (function() {
       var filename, md;
       md = stor.get('aMarkedMarkdown');
@@ -438,8 +456,11 @@ aMarked.controller('MainAppCtrl', [
       stor.set('aMarkedFile', $scope.filename);
       return $scope.editFileName = false;
     };
-    return $scope.closeOptions = function() {
+    $scope.closeOptions = function() {
       $scope.showOptions = false;
+    };
+    return $scope.setSticky = function() {
+      return $scope.stickyScrolling = this.stickyScrolling;
     };
   }
 ]);

@@ -48,7 +48,9 @@
       <div class="close" ng-click="closeOptions()">&times;</div>
       <h2 class="optionsTitle">AwesoMarked Options</h2>
       <form name="optionsPanel">
-
+        <label class="checkbox">
+          <input type="checkbox" ng-model="stickyScrolling" ng-click="setSticky()"> Sticky scrolling
+        </label>
       </form>
     </div>
 
@@ -95,7 +97,7 @@
       </header>
       <div class="row-fluid side-by-side">
         <section id="markdown" class="markdown">
-          <textarea ng-model="markdown" markdown-processor></textarea>
+          <textarea ng-model="markdown" markdown-processor sticky-scroll="stickyScrolling == true"></textarea>
         </section>
         <section id="preview" class="preview">
           <article markdown-preview></article>

@@ -5,6 +5,7 @@ aMarked.controller 'MainAppCtrl', [
     $scope.title = "ng-Bootstrap"
     $scope.preview = ''
     $scope.showOptions = false
+    $scope.stickyScrolling = true
 
     getSavedState = do ->
       md = stor.get('aMarkedMarkdown')
@@ -25,4 +26,7 @@ aMarked.controller 'MainAppCtrl', [
     $scope.closeOptions = ->
       $scope.showOptions = false
       return
+
+    $scope.setSticky = ->
+      $scope.stickyScrolling = this.stickyScrolling
 ]

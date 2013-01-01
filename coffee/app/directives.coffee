@@ -104,8 +104,7 @@ aMarked.directive 'slideFadeShow', ->
     # Set watch on slideFadeShow attr expression
     scope.$watch ->
       scope.$eval exp
-    , (toShow) ->
-      slideElem(toShow)
+    , slideElem
 
 aMarked.directive 'fadeShow', ->
   (scope, elem, attrs) ->
@@ -129,6 +128,22 @@ aMarked.directive 'fadeShow', ->
     # Set watch
     scope.$watch ->
       scope.$eval exp
-    , (toShow) ->
-      fadeElem(toShow)
+    , fadeElem
 
+aMarked.directive 'stickyScroll', ->
+  (scope, elem, attrs) ->
+    $elem = $(elem)
+    exp = attrs.stickyScroll
+
+    scrollItems = (isEnabled) ->
+      if isEnabled
+        $elem.on 'scroll', (e) ->
+          $('#preview').scrollTop(e.target.scrollTop)
+      else
+        $elem.off 'scroll'
+
+    scrollItems(scope.$eval exp)
+
+    scope.$watch ->
+      scope.$eval exp
+    , scrollItems
