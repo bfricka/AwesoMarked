@@ -1,6 +1,6 @@
 {
   "CodeKitInfo" : "This is a CodeKit project configuration file. It is designed to sync project settings across multiple machines. Modifying the contents of this file can be a poor life decision if you don't know what you're doing. This file is not useful unless accompanied by the project that created it in CodeKit. For more information, see: http:\/\/incident57.com\/codekit",
-  "creatorBuild" : "6708",
+  "creatorBuild" : "8241",
   "files" : {
     "\/css\/highlight\/pojoaque.jpg" : {
       "ignoreWasSetByUser" : 0,
@@ -11,7 +11,7 @@
       "processed" : 0,
       "outputAbbreviatedPath" : "\/css\/highlight\/pojoaque.jpg",
       "initialSize" : 1186,
-      "fileType" : 9
+      "fileType" : 4096
     },
     "\/less\/bootstrap\/navs.less" : {
       "ignoreWasSetByUser" : 0,
@@ -23,7 +23,8 @@
       "shouldRunBless" : 1,
       "outputAbbreviatedPath" : "\/less\/css\/navs.css",
       "strictImports" : 0,
-      "fileType" : 0
+      "fileType" : 1,
+      "debugStyle" : 0
     },
     "\/css\/highlight\/tomorrow-night-bright.css" : {
       "ignoreWasSetByUser" : 0,
@@ -32,7 +33,7 @@
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/css\/highlight\/tomorrow-night-bright.css",
       "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 13
+      "fileType" : 16
     },
     "\/less\/bootstrap\/modals.less" : {
       "ignoreWasSetByUser" : 0,
@@ -44,7 +45,19 @@
       "shouldRunBless" : 1,
       "outputAbbreviatedPath" : "\/less\/css\/modals.css",
       "strictImports" : 0,
-      "fileType" : 0
+      "fileType" : 1,
+      "debugStyle" : 0
+    },
+    "\/js\/libs\/highlight.js" : {
+      "ignoreWasSetByUser" : 1,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 1,
+      "inputAbbreviatedPath" : "\/js\/libs\/highlight.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 0,
+      "outputAbbreviatedPath" : "\/js\/libs\/highlight.min.js",
+      "fileType" : 64
     },
     "\/less\/bootstrap\/pagination.less" : {
       "ignoreWasSetByUser" : 0,
@@ -56,18 +69,19 @@
       "shouldRunBless" : 1,
       "outputAbbreviatedPath" : "\/less\/css\/pagination.css",
       "strictImports" : 0,
-      "fileType" : 0
+      "fileType" : 1,
+      "debugStyle" : 0
     },
     "\/js\/libs\/angular-sanitize.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
+      "ignoreWasSetByUser" : 1,
+      "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/js\/libs\/angular-sanitize.js",
       "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
+      "syntaxCheckerStyle" : 0,
       "outputAbbreviatedPath" : "\/js\/libs\/angular-sanitize-min.js",
-      "fileType" : 5
+      "fileType" : 64
     },
     "\/css\/highlight\/magula.css" : {
       "ignoreWasSetByUser" : 0,
@@ -76,90 +90,7 @@
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/css\/highlight\/magula.css",
       "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 13
-    },
-    "\/js\/libs\/bootstrap.min.js" : {
-      "ignoreWasSetByUser" : 1,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/libs\/bootstrap.min.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/js\/libs\/bootstrap.min-min.js",
-      "fileType" : 5
-    },
-    "\/less\/bootstrap\/thumbnails.less" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/less\/bootstrap\/thumbnails.less",
-      "outputStyle" : 1,
-      "shouldRunBless" : 1,
-      "outputAbbreviatedPath" : "\/less\/css\/thumbnails.css",
-      "strictImports" : 0,
-      "fileType" : 0
-    },
-    "\/less\/bootstrap\/reset.less" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/less\/bootstrap\/reset.less",
-      "outputStyle" : 1,
-      "shouldRunBless" : 1,
-      "outputAbbreviatedPath" : "\/less\/css\/reset.css",
-      "strictImports" : 0,
-      "fileType" : 0
-    },
-    "\/less\/bootstrap\/hero-unit.less" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/less\/bootstrap\/hero-unit.less",
-      "outputStyle" : 1,
-      "shouldRunBless" : 1,
-      "outputAbbreviatedPath" : "\/less\/css\/hero-unit.css",
-      "strictImports" : 0,
-      "fileType" : 0
-    },
-    "\/coffee\/app\/services.coffee" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/coffee\/app\/services.coffee",
-      "checkOutputStyle" : 1,
-      "minifyOutput" : 0,
-      "outputAbbreviatedPath" : "\/coffee\/app\/services.js",
-      "outputStyle" : 0,
-      "fileType" : 4
-    },
-    "\/less\/bootstrap\/utilities.less" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/less\/bootstrap\/utilities.less",
-      "outputStyle" : 1,
-      "shouldRunBless" : 1,
-      "outputAbbreviatedPath" : "\/less\/css\/utilities.css",
-      "strictImports" : 0,
-      "fileType" : 0
-    },
-    "\/less\/bootstrap\/mixins.less" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/less\/bootstrap\/mixins.less",
-      "outputStyle" : 1,
-      "shouldRunBless" : 1,
-      "outputAbbreviatedPath" : "\/less\/css\/mixins.css",
-      "strictImports" : 0,
-      "fileType" : 0
+      "fileType" : 16
     },
     "\/less\/bootstrap\/pager.less" : {
       "ignoreWasSetByUser" : 0,
@@ -171,7 +102,85 @@
       "shouldRunBless" : 1,
       "outputAbbreviatedPath" : "\/less\/css\/pager.css",
       "strictImports" : 0,
-      "fileType" : 0
+      "fileType" : 1,
+      "debugStyle" : 0
+    },
+    "\/less\/bootstrap\/utilities.less" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/less\/bootstrap\/utilities.less",
+      "outputStyle" : 1,
+      "shouldRunBless" : 1,
+      "outputAbbreviatedPath" : "\/less\/css\/utilities.css",
+      "strictImports" : 0,
+      "fileType" : 1,
+      "debugStyle" : 0
+    },
+    "\/less\/bootstrap\/reset.less" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/less\/bootstrap\/reset.less",
+      "outputStyle" : 1,
+      "shouldRunBless" : 1,
+      "outputAbbreviatedPath" : "\/less\/css\/reset.css",
+      "strictImports" : 0,
+      "fileType" : 1,
+      "debugStyle" : 0
+    },
+    "\/less\/bootstrap\/hero-unit.less" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/less\/bootstrap\/hero-unit.less",
+      "outputStyle" : 1,
+      "shouldRunBless" : 1,
+      "outputAbbreviatedPath" : "\/less\/css\/hero-unit.css",
+      "strictImports" : 0,
+      "fileType" : 1,
+      "debugStyle" : 0
+    },
+    "\/coffee\/app\/services.coffee" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/coffee\/app\/services.coffee",
+      "checkOutputStyle" : 1,
+      "minifyOutput" : 0,
+      "outputAbbreviatedPath" : "\/coffee\/app\/services.js",
+      "outputStyle" : 0,
+      "fileType" : 32
+    },
+    "\/less\/bootstrap\/thumbnails.less" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/less\/bootstrap\/thumbnails.less",
+      "outputStyle" : 1,
+      "shouldRunBless" : 1,
+      "outputAbbreviatedPath" : "\/less\/css\/thumbnails.css",
+      "strictImports" : 0,
+      "fileType" : 1,
+      "debugStyle" : 0
+    },
+    "\/less\/bootstrap\/mixins.less" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/less\/bootstrap\/mixins.less",
+      "outputStyle" : 1,
+      "shouldRunBless" : 1,
+      "outputAbbreviatedPath" : "\/less\/css\/mixins.css",
+      "strictImports" : 0,
+      "fileType" : 1,
+      "debugStyle" : 0
     },
     "\/js\/libs\/amplify.store.js" : {
       "ignoreWasSetByUser" : 1,
@@ -180,9 +189,9 @@
       "outputPathIsSetByUser" : 1,
       "inputAbbreviatedPath" : "\/js\/libs\/amplify.store.js",
       "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
+      "syntaxCheckerStyle" : 0,
       "outputAbbreviatedPath" : "\/js\/libs\/amplify.store.min.js",
-      "fileType" : 5
+      "fileType" : 64
     },
     "\/less\/bootstrap\/labels-badges.less" : {
       "ignoreWasSetByUser" : 0,
@@ -194,11 +203,23 @@
       "shouldRunBless" : 1,
       "outputAbbreviatedPath" : "\/less\/css\/labels-badges.css",
       "strictImports" : 0,
-      "fileType" : 0
+      "fileType" : 1,
+      "debugStyle" : 0
+    },
+    "\/js\/libs\/lodash.js" : {
+      "ignoreWasSetByUser" : 1,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/js\/libs\/lodash.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 0,
+      "outputAbbreviatedPath" : "\/js\/libs\/lodash-min.js",
+      "fileType" : 64
     },
     "\/coffee\/plugins.coffee" : {
       "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
+      "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/coffee\/plugins.coffee",
@@ -206,7 +227,7 @@
       "minifyOutput" : 0,
       "outputAbbreviatedPath" : "\/coffee\/plugins.js",
       "outputStyle" : 0,
-      "fileType" : 4
+      "fileType" : 32
     },
     "\/css\/highlight\/github.css" : {
       "ignoreWasSetByUser" : 0,
@@ -215,7 +236,7 @@
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/css\/highlight\/github.css",
       "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 13
+      "fileType" : 16
     },
     "\/less\/bootstrap\/component-animations.less" : {
       "ignoreWasSetByUser" : 0,
@@ -227,7 +248,21 @@
       "shouldRunBless" : 1,
       "outputAbbreviatedPath" : "\/less\/css\/component-animations.css",
       "strictImports" : 0,
-      "fileType" : 0
+      "fileType" : 1,
+      "debugStyle" : 0
+    },
+    "\/less\/bootstrap\/media.less" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/less\/bootstrap\/media.less",
+      "outputStyle" : 1,
+      "shouldRunBless" : 1,
+      "outputAbbreviatedPath" : "\/less\/css\/media.css",
+      "strictImports" : 0,
+      "fileType" : 1,
+      "debugStyle" : 0
     },
     "\/css\/highlight\/tomorrow.css" : {
       "ignoreWasSetByUser" : 0,
@@ -236,7 +271,7 @@
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/css\/highlight\/tomorrow.css",
       "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 13
+      "fileType" : 16
     },
     "\/css\/highlight\/monokai.css" : {
       "ignoreWasSetByUser" : 0,
@@ -245,7 +280,7 @@
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/css\/highlight\/monokai.css",
       "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 13
+      "fileType" : 16
     },
     "\/less\/bootstrap\/alerts.less" : {
       "ignoreWasSetByUser" : 0,
@@ -257,7 +292,8 @@
       "shouldRunBless" : 1,
       "outputAbbreviatedPath" : "\/less\/css\/alerts.css",
       "strictImports" : 0,
-      "fileType" : 0
+      "fileType" : 1,
+      "debugStyle" : 0
     },
     "\/coffee\/app\/directives.coffee" : {
       "ignoreWasSetByUser" : 0,
@@ -269,7 +305,7 @@
       "minifyOutput" : 0,
       "outputAbbreviatedPath" : "\/coffee\/app\/directives.js",
       "outputStyle" : 0,
-      "fileType" : 4
+      "fileType" : 32
     },
     "\/js\/libs\/angular.js" : {
       "ignoreWasSetByUser" : 1,
@@ -278,9 +314,9 @@
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/js\/libs\/angular.js",
       "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
+      "syntaxCheckerStyle" : 0,
       "outputAbbreviatedPath" : "\/js\/libs\/angular-min.js",
-      "fileType" : 5
+      "fileType" : 64
     },
     "\/less\/bootstrap\/variables.less" : {
       "ignoreWasSetByUser" : 0,
@@ -292,7 +328,8 @@
       "shouldRunBless" : 1,
       "outputAbbreviatedPath" : "\/less\/css\/variables.css",
       "strictImports" : 0,
-      "fileType" : 0
+      "fileType" : 1,
+      "debugStyle" : 0
     },
     "\/css\/highlight\/pojoaque.css" : {
       "ignoreWasSetByUser" : 0,
@@ -301,7 +338,7 @@
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/css\/highlight\/pojoaque.css",
       "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 13
+      "fileType" : 16
     },
     "\/less\/bootstrap\/carousel.less" : {
       "ignoreWasSetByUser" : 0,
@@ -313,7 +350,8 @@
       "shouldRunBless" : 1,
       "outputAbbreviatedPath" : "\/less\/css\/carousel.css",
       "strictImports" : 0,
-      "fileType" : 0
+      "fileType" : 1,
+      "debugStyle" : 0
     },
     "\/img\/glyphicons-halflings.png" : {
       "ignoreWasSetByUser" : 0,
@@ -324,7 +362,7 @@
       "processed" : 0,
       "outputAbbreviatedPath" : "\/img\/glyphicons-halflings.png",
       "initialSize" : 12799,
-      "fileType" : 10
+      "fileType" : 8192
     },
     "\/less\/bootstrap\/sprites.less" : {
       "ignoreWasSetByUser" : 0,
@@ -336,7 +374,8 @@
       "shouldRunBless" : 1,
       "outputAbbreviatedPath" : "\/less\/css\/sprites.css",
       "strictImports" : 0,
-      "fileType" : 0
+      "fileType" : 1,
+      "debugStyle" : 0
     },
     "\/css\/highlight\/rainbow.css" : {
       "ignoreWasSetByUser" : 0,
@@ -345,7 +384,7 @@
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/css\/highlight\/rainbow.css",
       "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 13
+      "fileType" : 16
     },
     "\/less\/bootstrap\/buttons.less" : {
       "ignoreWasSetByUser" : 0,
@@ -357,7 +396,8 @@
       "shouldRunBless" : 1,
       "outputAbbreviatedPath" : "\/less\/css\/buttons.css",
       "strictImports" : 0,
-      "fileType" : 0
+      "fileType" : 1,
+      "debugStyle" : 0
     },
     "\/css\/highlight\/vs.css" : {
       "ignoreWasSetByUser" : 0,
@@ -366,7 +406,7 @@
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/css\/highlight\/vs.css",
       "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 13
+      "fileType" : 16
     },
     "\/css\/highlight\/tomorrow-night-eighties.css" : {
       "ignoreWasSetByUser" : 0,
@@ -375,7 +415,7 @@
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/css\/highlight\/tomorrow-night-eighties.css",
       "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 13
+      "fileType" : 16
     },
     "\/css\/highlight\/solarized_dark.css" : {
       "ignoreWasSetByUser" : 0,
@@ -384,7 +424,7 @@
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/css\/highlight\/solarized_dark.css",
       "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 13
+      "fileType" : 16
     },
     "\/less\/bootstrap\/breadcrumbs.less" : {
       "ignoreWasSetByUser" : 0,
@@ -396,18 +436,30 @@
       "shouldRunBless" : 1,
       "outputAbbreviatedPath" : "\/less\/css\/breadcrumbs.css",
       "strictImports" : 0,
-      "fileType" : 0
+      "fileType" : 1,
+      "debugStyle" : 0
     },
-    "\/js\/libs\/underscore.js" : {
-      "ignoreWasSetByUser" : 1,
+    "\/js\/awesomarked.js" : {
+      "ignoreWasSetByUser" : 0,
       "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/libs\/underscore.js",
+      "inputAbbreviatedPath" : "\/js\/awesomarked.js",
       "outputStyle" : 1,
       "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/js\/libs\/underscore-min.js",
-      "fileType" : 5
+      "outputAbbreviatedPath" : "\/js\/awesomarked-min.js",
+      "fileType" : 64
+    },
+    "\/js\/libs\/marked.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/js\/libs\/marked.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/js\/libs\/marked-min.js",
+      "fileType" : 64
     },
     "\/less\/bootstrap\/type.less" : {
       "ignoreWasSetByUser" : 0,
@@ -419,7 +471,8 @@
       "shouldRunBless" : 1,
       "outputAbbreviatedPath" : "\/less\/css\/type.css",
       "strictImports" : 0,
-      "fileType" : 0
+      "fileType" : 1,
+      "debugStyle" : 0
     },
     "\/css\/highlight\/brown_paper.css" : {
       "ignoreWasSetByUser" : 0,
@@ -428,7 +481,7 @@
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/css\/highlight\/brown_paper.css",
       "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 13
+      "fileType" : 16
     },
     "\/less\/bootstrap\/tables.less" : {
       "ignoreWasSetByUser" : 0,
@@ -440,7 +493,8 @@
       "shouldRunBless" : 1,
       "outputAbbreviatedPath" : "\/less\/css\/tables.css",
       "strictImports" : 0,
-      "fileType" : 0
+      "fileType" : 1,
+      "debugStyle" : 0
     },
     "\/css\/highlight\/arta.css" : {
       "ignoreWasSetByUser" : 0,
@@ -449,7 +503,7 @@
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/css\/highlight\/arta.css",
       "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 13
+      "fileType" : 16
     },
     "\/less\/bootstrap\/scaffolding.less" : {
       "ignoreWasSetByUser" : 0,
@@ -461,18 +515,8 @@
       "shouldRunBless" : 1,
       "outputAbbreviatedPath" : "\/less\/css\/scaffolding.css",
       "strictImports" : 0,
-      "fileType" : 0
-    },
-    "\/js\/app.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/app.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/js\/app-min.js",
-      "fileType" : 5
+      "fileType" : 1,
+      "debugStyle" : 0
     },
     "\/css\/highlight\/sunburst.css" : {
       "ignoreWasSetByUser" : 0,
@@ -481,7 +525,7 @@
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/css\/highlight\/sunburst.css",
       "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 13
+      "fileType" : 16
     },
     "\/coffee\/app\/app.coffee" : {
       "ignoreWasSetByUser" : 0,
@@ -491,9 +535,20 @@
       "inputAbbreviatedPath" : "\/coffee\/app\/app.coffee",
       "checkOutputStyle" : 1,
       "minifyOutput" : 0,
-      "outputAbbreviatedPath" : "\/js\/app.js",
+      "outputAbbreviatedPath" : "\/js\/awesomarked.js",
       "outputStyle" : 1,
-      "fileType" : 4
+      "fileType" : 32
+    },
+    "\/js\/libs\/highlight.min.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/js\/libs\/highlight.min.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/js\/libs\/highlight.min-min.js",
+      "fileType" : 64
     },
     "\/css\/highlight\/brown_papersq.png" : {
       "ignoreWasSetByUser" : 0,
@@ -504,7 +559,7 @@
       "processed" : 0,
       "outputAbbreviatedPath" : "\/css\/highlight\/brown_papersq.png",
       "initialSize" : 18198,
-      "fileType" : 10
+      "fileType" : 8192
     },
     "\/css\/highlight\/far.css" : {
       "ignoreWasSetByUser" : 0,
@@ -513,7 +568,7 @@
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/css\/highlight\/far.css",
       "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 13
+      "fileType" : 16
     },
     "\/less\/bootstrap\/responsive-utilities.less" : {
       "ignoreWasSetByUser" : 0,
@@ -525,7 +580,8 @@
       "shouldRunBless" : 1,
       "outputAbbreviatedPath" : "\/less\/css\/responsive-utilities.css",
       "strictImports" : 0,
-      "fileType" : 0
+      "fileType" : 1,
+      "debugStyle" : 0
     },
     "\/css\/highlight\/googlecode.css" : {
       "ignoreWasSetByUser" : 0,
@@ -534,7 +590,7 @@
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/css\/highlight\/googlecode.css",
       "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 13
+      "fileType" : 16
     },
     "\/less\/bootstrap\/accordion.less" : {
       "ignoreWasSetByUser" : 0,
@@ -546,7 +602,8 @@
       "shouldRunBless" : 1,
       "outputAbbreviatedPath" : "\/less\/css\/accordion.css",
       "strictImports" : 0,
-      "fileType" : 0
+      "fileType" : 1,
+      "debugStyle" : 0
     },
     "\/less\/bootstrap\/responsive.less" : {
       "ignoreWasSetByUser" : 0,
@@ -558,7 +615,8 @@
       "shouldRunBless" : 1,
       "outputAbbreviatedPath" : "\/less\/css\/responsive.css",
       "strictImports" : 0,
-      "fileType" : 0
+      "fileType" : 1,
+      "debugStyle" : 0
     },
     "\/css\/highlight\/tomorrow-night-blue.css" : {
       "ignoreWasSetByUser" : 0,
@@ -567,7 +625,7 @@
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/css\/highlight\/tomorrow-night-blue.css",
       "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 13
+      "fileType" : 16
     },
     "\/index.html" : {
       "ignoreWasSetByUser" : 0,
@@ -576,28 +634,7 @@
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/index.html",
       "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 8
-    },
-    "\/less\/bootstrap\/code.less" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/less\/bootstrap\/code.less",
-      "outputStyle" : 1,
-      "shouldRunBless" : 1,
-      "outputAbbreviatedPath" : "\/less\/css\/code.css",
-      "strictImports" : 0,
-      "fileType" : 0
-    },
-    "\/css\/highlight\/idea.css" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/css\/highlight\/idea.css",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 13
+      "fileType" : 2048
     },
     "\/less\/bootstrap\/grid.less" : {
       "ignoreWasSetByUser" : 0,
@@ -609,7 +646,17 @@
       "shouldRunBless" : 1,
       "outputAbbreviatedPath" : "\/less\/css\/grid.css",
       "strictImports" : 0,
-      "fileType" : 0
+      "fileType" : 1,
+      "debugStyle" : 0
+    },
+    "\/css\/highlight\/idea.css" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/css\/highlight\/idea.css",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 16
     },
     "\/img\/glyphicons-halflings-white.png" : {
       "ignoreWasSetByUser" : 0,
@@ -620,7 +667,20 @@
       "processed" : 0,
       "outputAbbreviatedPath" : "\/img\/glyphicons-halflings-white.png",
       "initialSize" : 8777,
-      "fileType" : 10
+      "fileType" : 8192
+    },
+    "\/less\/bootstrap\/code.less" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/less\/bootstrap\/code.less",
+      "outputStyle" : 1,
+      "shouldRunBless" : 1,
+      "outputAbbreviatedPath" : "\/less\/css\/code.css",
+      "strictImports" : 0,
+      "fileType" : 1,
+      "debugStyle" : 0
     },
     "\/less\/style.less" : {
       "ignoreWasSetByUser" : 0,
@@ -632,29 +692,8 @@
       "shouldRunBless" : 1,
       "outputAbbreviatedPath" : "\/css\/style.css",
       "strictImports" : 0,
-      "fileType" : 0
-    },
-    "\/js\/libs\/angular-sanitize.min.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/libs\/angular-sanitize.min.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/js\/libs\/angular-sanitize.min-min.js",
-      "fileType" : 5
-    },
-    "\/js\/libs\/bootstrap.js" : {
-      "ignoreWasSetByUser" : 1,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/libs\/bootstrap.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/js\/libs\/bootstrap-min.js",
-      "fileType" : 5
+      "fileType" : 1,
+      "debugStyle" : 0
     },
     "\/coffee\/app\/controllers.coffee" : {
       "ignoreWasSetByUser" : 0,
@@ -666,7 +705,18 @@
       "minifyOutput" : 0,
       "outputAbbreviatedPath" : "\/coffee\/app\/controllers.js",
       "outputStyle" : 0,
-      "fileType" : 4
+      "fileType" : 32
+    },
+    "\/js\/libs\/angular-sanitize.min.js" : {
+      "ignoreWasSetByUser" : 1,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/js\/libs\/angular-sanitize.min.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 0,
+      "outputAbbreviatedPath" : "\/js\/libs\/angular-sanitize.min-min.js",
+      "fileType" : 64
     },
     "\/css\/highlight\/ir_black.css" : {
       "ignoreWasSetByUser" : 0,
@@ -675,7 +725,7 @@
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/css\/highlight\/ir_black.css",
       "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 13
+      "fileType" : 16
     },
     "\/css\/highlight\/school_book.css" : {
       "ignoreWasSetByUser" : 0,
@@ -684,7 +734,7 @@
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/css\/highlight\/school_book.css",
       "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 13
+      "fileType" : 16
     },
     "\/less\/bootstrap\/layouts.less" : {
       "ignoreWasSetByUser" : 0,
@@ -696,7 +746,8 @@
       "shouldRunBless" : 1,
       "outputAbbreviatedPath" : "\/less\/css\/layouts.css",
       "strictImports" : 0,
-      "fileType" : 0
+      "fileType" : 1,
+      "debugStyle" : 0
     },
     "\/less\/bootstrap\/progress-bars.less" : {
       "ignoreWasSetByUser" : 0,
@@ -708,7 +759,8 @@
       "shouldRunBless" : 1,
       "outputAbbreviatedPath" : "\/less\/css\/progress-bars.css",
       "strictImports" : 0,
-      "fileType" : 0
+      "fileType" : 1,
+      "debugStyle" : 0
     },
     "\/css\/highlight\/default.css" : {
       "ignoreWasSetByUser" : 0,
@@ -717,7 +769,7 @@
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/css\/highlight\/default.css",
       "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 13
+      "fileType" : 16
     },
     "\/less\/bootstrap\/responsive-navbar.less" : {
       "ignoreWasSetByUser" : 0,
@@ -729,7 +781,8 @@
       "shouldRunBless" : 1,
       "outputAbbreviatedPath" : "\/less\/css\/responsive-navbar.css",
       "strictImports" : 0,
-      "fileType" : 0
+      "fileType" : 1,
+      "debugStyle" : 0
     },
     "\/css\/style.css" : {
       "ignoreWasSetByUser" : 0,
@@ -738,7 +791,7 @@
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/css\/style.css",
       "outputAbbreviatedPath" : "\/No Output Path",
-      "fileType" : 13
+      "fileType" : 16
     },
     "\/css\/highlight\/school_book.png" : {
       "ignoreWasSetByUser" : 0,
@@ -749,7 +802,7 @@
       "processed" : 0,
       "outputAbbreviatedPath" : "\/css\/highlight\/school_book.png",
       "initialSize" : 486,
-      "fileType" : 10
+      "fileType" : 8192
     },
     "\/js\/libs\/jquery.min.js" : {
       "ignoreWasSetByUser" : 1,
@@ -758,9 +811,20 @@
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/js\/libs\/jquery.min.js",
       "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
+      "syntaxCheckerStyle" : 0,
       "outputAbbreviatedPath" : "\/js\/libs\/jquery.min-min.js",
-      "fileType" : 5
+      "fileType" : 64
+    },
+    "\/js\/libs\/marked-min.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/js\/libs\/marked-min.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/js\/libs\/marked-min-min.js",
+      "fileType" : 64
     },
     "\/js\/libs\/jquery.js" : {
       "ignoreWasSetByUser" : 1,
@@ -769,18 +833,9 @@
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/js\/libs\/jquery.js",
       "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
+      "syntaxCheckerStyle" : 0,
       "outputAbbreviatedPath" : "\/js\/libs\/jquery-min.js",
-      "fileType" : 5
-    },
-    "\/css\/highlight\/ascetic.css" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/css\/highlight\/ascetic.css",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 13
+      "fileType" : 64
     },
     "\/less\/app\/main.less" : {
       "ignoreWasSetByUser" : 0,
@@ -792,7 +847,17 @@
       "shouldRunBless" : 1,
       "outputAbbreviatedPath" : "\/less\/css\/main.css",
       "strictImports" : 0,
-      "fileType" : 0
+      "fileType" : 1,
+      "debugStyle" : 0
+    },
+    "\/css\/highlight\/ascetic.css" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/css\/highlight\/ascetic.css",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 16
     },
     "\/js\/libs\/angular.min.js" : {
       "ignoreWasSetByUser" : 1,
@@ -801,9 +866,9 @@
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/js\/libs\/angular.min.js",
       "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
+      "syntaxCheckerStyle" : 0,
       "outputAbbreviatedPath" : "\/js\/libs\/angular.min-min.js",
-      "fileType" : 5
+      "fileType" : 64
     },
     "\/less\/bootstrap\/responsive-768px-979px.less" : {
       "ignoreWasSetByUser" : 0,
@@ -815,7 +880,8 @@
       "shouldRunBless" : 1,
       "outputAbbreviatedPath" : "\/less\/css\/responsive-768px-979px.css",
       "strictImports" : 0,
-      "fileType" : 0
+      "fileType" : 1,
+      "debugStyle" : 0
     },
     "\/less\/bootstrap\/responsive-1200px-min.less" : {
       "ignoreWasSetByUser" : 0,
@@ -827,7 +893,8 @@
       "shouldRunBless" : 1,
       "outputAbbreviatedPath" : "\/less\/css\/responsive-1200px-min.css",
       "strictImports" : 0,
-      "fileType" : 0
+      "fileType" : 1,
+      "debugStyle" : 0
     },
     "\/less\/bootstrap\/forms.less" : {
       "ignoreWasSetByUser" : 0,
@@ -839,7 +906,8 @@
       "shouldRunBless" : 1,
       "outputAbbreviatedPath" : "\/less\/css\/forms.css",
       "strictImports" : 0,
-      "fileType" : 0
+      "fileType" : 1,
+      "debugStyle" : 0
     },
     "\/coffee\/app\/filters.coffee" : {
       "ignoreWasSetByUser" : 0,
@@ -851,7 +919,7 @@
       "minifyOutput" : 0,
       "outputAbbreviatedPath" : "\/coffee\/app\/filters.js",
       "outputStyle" : 0,
-      "fileType" : 4
+      "fileType" : 32
     },
     "\/css\/highlight\/tomorrow-night.css" : {
       "ignoreWasSetByUser" : 0,
@@ -860,7 +928,7 @@
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/css\/highlight\/tomorrow-night.css",
       "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 13
+      "fileType" : 16
     },
     "\/js\/libs\/amplify.store.min.js" : {
       "ignoreWasSetByUser" : 0,
@@ -871,7 +939,7 @@
       "outputStyle" : 1,
       "syntaxCheckerStyle" : 1,
       "outputAbbreviatedPath" : "\/js\/libs\/amplify.store.min-min.js",
-      "fileType" : 5
+      "fileType" : 64
     },
     "\/css\/highlight\/dark.css" : {
       "ignoreWasSetByUser" : 0,
@@ -880,7 +948,7 @@
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/css\/highlight\/dark.css",
       "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 13
+      "fileType" : 16
     },
     "\/css\/highlight\/zenburn.css" : {
       "ignoreWasSetByUser" : 0,
@@ -889,7 +957,7 @@
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/css\/highlight\/zenburn.css",
       "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 13
+      "fileType" : 16
     },
     "\/less\/bootstrap\/popovers.less" : {
       "ignoreWasSetByUser" : 0,
@@ -901,19 +969,8 @@
       "shouldRunBless" : 1,
       "outputAbbreviatedPath" : "\/less\/css\/popovers.css",
       "strictImports" : 0,
-      "fileType" : 0
-    },
-    "\/less\/bootstrap\/bootstrap.less" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/less\/bootstrap\/bootstrap.less",
-      "outputStyle" : 1,
-      "shouldRunBless" : 1,
-      "outputAbbreviatedPath" : "\/less\/css\/bootstrap.css",
-      "strictImports" : 0,
-      "fileType" : 0
+      "fileType" : 1,
+      "debugStyle" : 0
     },
     "\/less\/bootstrap\/close.less" : {
       "ignoreWasSetByUser" : 0,
@@ -925,18 +982,32 @@
       "shouldRunBless" : 1,
       "outputAbbreviatedPath" : "\/less\/css\/close.css",
       "strictImports" : 0,
-      "fileType" : 0
+      "fileType" : 1,
+      "debugStyle" : 0
     },
-    "\/js\/libs\/highlight.pack.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
+    "\/js\/libs\/lodash.min.js" : {
+      "ignoreWasSetByUser" : 1,
+      "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/libs\/highlight.pack.js",
+      "inputAbbreviatedPath" : "\/js\/libs\/lodash.min.js",
       "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/js\/libs\/highlight.pack-min.js",
-      "fileType" : 5
+      "syntaxCheckerStyle" : 0,
+      "outputAbbreviatedPath" : "\/js\/libs\/lodash.min-min.js",
+      "fileType" : 64
+    },
+    "\/less\/bootstrap\/bootstrap.less" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/less\/bootstrap\/bootstrap.less",
+      "outputStyle" : 1,
+      "shouldRunBless" : 1,
+      "outputAbbreviatedPath" : "\/less\/css\/bootstrap.css",
+      "strictImports" : 0,
+      "fileType" : 1,
+      "debugStyle" : 0
     },
     "\/less\/bootstrap\/dropdowns.less" : {
       "ignoreWasSetByUser" : 0,
@@ -948,7 +1019,8 @@
       "shouldRunBless" : 1,
       "outputAbbreviatedPath" : "\/less\/css\/dropdowns.css",
       "strictImports" : 0,
-      "fileType" : 0
+      "fileType" : 1,
+      "debugStyle" : 0
     },
     "\/less\/bootstrap\/button-groups.less" : {
       "ignoreWasSetByUser" : 0,
@@ -960,7 +1032,8 @@
       "shouldRunBless" : 1,
       "outputAbbreviatedPath" : "\/less\/css\/button-groups.css",
       "strictImports" : 0,
-      "fileType" : 0
+      "fileType" : 1,
+      "debugStyle" : 0
     },
     "\/js\/libs\/modernizr.js" : {
       "ignoreWasSetByUser" : 1,
@@ -969,9 +1042,9 @@
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/js\/libs\/modernizr.js",
       "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
+      "syntaxCheckerStyle" : 0,
       "outputAbbreviatedPath" : "\/js\/libs\/modernizr-min.js",
-      "fileType" : 5
+      "fileType" : 64
     },
     "\/css\/highlight\/xcode.css" : {
       "ignoreWasSetByUser" : 0,
@@ -980,7 +1053,7 @@
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/css\/highlight\/xcode.css",
       "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 13
+      "fileType" : 16
     },
     "\/less\/bootstrap\/responsive-767px-max.less" : {
       "ignoreWasSetByUser" : 0,
@@ -992,18 +1065,8 @@
       "shouldRunBless" : 1,
       "outputAbbreviatedPath" : "\/less\/css\/responsive-767px-max.css",
       "strictImports" : 0,
-      "fileType" : 0
-    },
-    "\/js\/libs\/underscore.min.js" : {
-      "ignoreWasSetByUser" : 1,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/libs\/underscore.min.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/js\/libs\/underscore.min-min.js",
-      "fileType" : 5
+      "fileType" : 1,
+      "debugStyle" : 0
     },
     "\/less\/bootstrap\/navbar.less" : {
       "ignoreWasSetByUser" : 0,
@@ -1015,7 +1078,8 @@
       "shouldRunBless" : 1,
       "outputAbbreviatedPath" : "\/less\/css\/navbar.css",
       "strictImports" : 0,
-      "fileType" : 0
+      "fileType" : 1,
+      "debugStyle" : 0
     },
     "\/css\/highlight\/solarized_light.css" : {
       "ignoreWasSetByUser" : 0,
@@ -1024,7 +1088,7 @@
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/css\/highlight\/solarized_light.css",
       "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 13
+      "fileType" : 16
     },
     "\/less\/bootstrap\/tooltip.less" : {
       "ignoreWasSetByUser" : 0,
@@ -1036,7 +1100,8 @@
       "shouldRunBless" : 1,
       "outputAbbreviatedPath" : "\/less\/css\/tooltip.css",
       "strictImports" : 0,
-      "fileType" : 0
+      "fileType" : 1,
+      "debugStyle" : 0
     },
     "\/less\/bootstrap\/wells.less" : {
       "ignoreWasSetByUser" : 0,
@@ -1048,7 +1113,8 @@
       "shouldRunBless" : 1,
       "outputAbbreviatedPath" : "\/less\/css\/wells.css",
       "strictImports" : 0,
-      "fileType" : 0
+      "fileType" : 1,
+      "debugStyle" : 0
     }
   },
   "manualImportLinks" : [
@@ -1056,6 +1122,7 @@
   ],
   "projectSettings" : {
     "hamlNoEscapeInAttributes" : 0,
+    "kitAutoOutputPathStyle" : 0,
     "lessOutputStyle" : 1,
     "hamlAutoOutputPathReplace2" : "",
     "draggedImportConcatenationStyle" : 1,
@@ -1071,21 +1138,23 @@
     "genericWebpageFileExtensionsString" : "html, xhtml, htm, shtml, shtm, php, jsp, asp, aspx, erb, ctp",
     "coffeeMinifyOutput" : 0,
     "javascriptOutputSuffix" : "-min",
-    "stylusLineNumbers" : 0,
     "jadeOutputStyle" : 0,
     "coffeeAutoOutputPathStyle" : 0,
+    "autoSyncProjectSettingsFile" : 1,
     "lessAutoOutputPathReplace1" : "less",
     "jadeAutoOutputPathReplace1" : "",
     "lessAutoOutputPathRelativePath" : "..\/css",
     "hamlAutoOutputPathRelativePath" : "",
-    "jsCheckerReservedNamesString" : "angular,$:write, jQuery,_,amplify,hljs",
+    "jsCheckerReservedNamesString" : "angular,$:write, jQuery,_,amplify,hljs,marked",
     "javascriptOutputStyle" : 1,
-    "sassDebugStyle" : 0,
+    "stylusDebugStyle" : 0,
+    "hamlUseCDATA" : 0,
     "hamlAutoOutputPathStyle" : 0,
+    "sassDebugStyle" : 0,
     "hamlOutputStyle" : 0,
-    "stylusFirebug" : 0,
     "stylusAutoOutputPathRelativePath" : "..\/css",
     "jsCheckerIndent" : 2,
+    "kitAutoOutputPathRelativePath" : "",
     "lessAutoOutputPathReplace2" : "css",
     "jadeAutoOutputPathReplace2" : "",
     "shouldRunBless" : 1,
@@ -1110,7 +1179,10 @@
     "coffeeAutoOutputPathReplace1" : "",
     "hamlUseDoubleQuotes" : 0,
     "coffeeAutoOutputPathReplace2" : "",
+    "kitAutoOutputPathReplace1" : "",
     "uglifyReservedNamesString" : "",
+    "coffeeOutputStyle" : 0,
+    "slimAutoOutputPathRelativePath" : "",
     "jsHintFlags" : {
       "latedef" : 1,
       "newcap" : 1,
@@ -1118,6 +1190,7 @@
       "trailing" : 1,
       "nonew" : 1,
       "withstmt" : 0,
+      "yui" : 0,
       "mootools" : 0,
       "proto" : 0,
       "boss" : 0,
@@ -1154,8 +1227,9 @@
       "unused" : 0,
       "debug" : 0,
       "bitwise" : 1,
-      "browser" : 1,
+      "white" : 0,
       "worker" : 0,
+      "browser" : 1,
       "laxcomma" : 0,
       "multistr" : 0,
       "shadow" : 1,
@@ -1167,8 +1241,6 @@
       "laxbreak" : 0,
       "plusplus" : 0
     },
-    "coffeeOutputStyle" : 0,
-    "slimAutoOutputPathRelativePath" : "",
     "jsLintFlags" : {
       "white" : 0,
       "bitwise" : 0,
@@ -1194,7 +1266,6 @@
       "confusion" : 0,
       "evil" : 0,
       "on" : 0,
-      "cap" : 0,
       "windows" : 0,
       "devel" : 0,
       "rhino" : 0,
@@ -1213,13 +1284,22 @@
       "no-seqs" : 1,
       "beautify" : 0,
       "lift-vars" : 1,
+      "consolidate-primitive-values" : 0,
       "no-squeeze" : 0
     },
     "sassAutoOutputPathReplace2" : "css",
     "slimAutoOutputPathReplace2" : "",
     "jadeCompileDebug" : 1,
     "slimRailsCompatible" : 0,
+    "kitAutoOutputPathReplace2" : "",
+    "lessDebugStyle" : 0,
     "javascriptAutoOutputPathRelativePath" : "",
     "slimAutoOutputPathStyle" : 0
+  },
+  "projectAttributes" : {
+    "bourbonEnabled" : 0,
+    "displayValue" : "AwesoMarked",
+    "displayValueWasSetByUser" : 1,
+    "compassEnabled" : 0
   }
 }
