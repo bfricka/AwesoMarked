@@ -1,3 +1,9 @@
+#@codekit-prepend "../jQuery.easing.coffee"
+#import "../jQuery.easing.coffee"
+
+#@codekit-prepend "../slideFade.coffee"
+#import "../slideFade.coffee"
+
 class Stor
   constructor: ->
     @amp = amplify.store

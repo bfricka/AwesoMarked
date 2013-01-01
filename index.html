@@ -28,8 +28,8 @@
     <!-- Dev -->    <script src="js/libs/marked.js"></script>
     <!-- Prod -->   <!-- <script src="js/libs/marked.min.js"></script> -->
 
-    <!-- Dev -->    <!-- <script src="js/libs/highlight.js"></script> -->
-    <!-- Prod -->   <script src="js/libs/highlight.min.js"></script>
+    <!-- Dev -->    <script src="js/libs/highlight.js"></script>
+    <!-- Prod -->   <!-- <script src="js/libs/highlight.min.js"></script> -->
 
     <!-- Dev -->    <script src="js/libs/angular.js"></script>
     <!-- Prod -->   <!--<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.3/angular.min.js"></script>-->
@@ -44,6 +44,14 @@
         <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
     <![endif]-->
 
+    <div class="optionsPanel" fade-show="showOptions == true" dialogbox ng-cloak>
+      <div class="close" ng-click="closeOptions()">&times;</div>
+      <h2 class="optionsTitle">AwesoMarked Options</h2>
+      <form name="optionsPanel">
+
+      </form>
+    </div>
+
     <div class="navbar navbar-inverse navbar-fluid-top" id="nav">
       <div class="navbar-inner">
         <div class="container">
@@ -55,6 +63,7 @@
           <a class="brand" href="#">AwesoMarked</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
+              <li><a href="javascript:" ng-click="showOptions = true">Options</a></li>
               <li><a href="javascript:" ng-click="editFileName = true">Save As</a></li>
               <li><a href="javascript:">Reset</a></li>
               <li><a href="javascript:">Contact</a></li>
