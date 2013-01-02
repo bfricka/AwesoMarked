@@ -1,3 +1,31 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#mdEdit,
+#mdPreview {
+  position: absolute;
+  top: 60px;
+  right: auto;
+  bottom: 50px;
+  left: 1%;
+  margin: 0;
+  padding: 9.5px;
+  width: 48%;
+  border: 1px solid #CCC;
+  border-radius: 4px;
+  background: #efefef;
+  .box-sizing(border-box);
+}
+
+#mdPreview {
+  left: auto;
+  right: 1%;
+}
+
 .ng-cloak { display: none; }
 
 code {
@@ -28,64 +56,64 @@ code {
   }
 }
 
-.aMarked-wrap {
-  .box-sizing(border-box);
-  position: fixed;
-  z-index: 1;
-  width: 100%;
-  height: 100%;
-  padding-top: 60px;
-  padding-bottom: 10px;
-  top: 0;
-}
+// .aMarked-wrap {
+//   .box-sizing(border-box);
+//   position: fixed;
+//   z-index: 1;
+//   width: 100%;
+//   height: 100%;
+//   padding-top: 60px;
+//   padding-bottom: 10px;
+//   top: 0;
+// }
 
 .filename {
   margin-bottom: 20px;
 }
 
-.side-by-side {
-  height: 100%;
-  padding-bottom: 80px;
-  .box-sizing(border-box);
-  .flex(1, 1, auto);
-  .flex-flow(row, nowrap);
-  .flex-justify(space-around);
-  .flex-align-items(stretch);
-}
+// .side-by-side {
+//   height: 100%;
+//   padding-bottom: 80px;
+//   .box-sizing(border-box);
+//   .flex(1, 1, auto);
+//   .flex-flow(row, nowrap);
+//   .flex-justify(space-around);
+//   .flex-align-items(stretch);
+// }
 
-.markdown,
-.preview {
-  .box-sizing(border-box);
-  .size(100%, 50%);
-}
+// .markdown,
+// .preview {
+//   .box-sizing(border-box);
+//   .size(100%, 50%);
+// }
 
-.markdown {
-  margin-right: 10px;
-  textarea {
-    overflow: auto;
-    .size(100%, 100%);
-    .box-sizing(border-box);
-    max-height: 100%;
-    max-width: 100%;
-    margin: 0;
-  }
-}
+// .markdown {
+//   margin-right: 10px;
+//   textarea {
+//     overflow: auto;
+//     .size(100%, 100%);
+//     .box-sizing(border-box);
+//     max-height: 100%;
+//     max-width: 100%;
+//     margin: 0;
+//   }
+// }
 
 .navbar {
   position: relative;
   z-index: 2;
 }
 
-.preview {
-  overflow: auto;
-  .border-radius(3px);
-  padding: 4px 6px;
-  border: 1px solid @tableBorder;
-}
+// .preview {
+//   overflow: auto;
+//   .border-radius(3px);
+//   padding: 4px 6px;
+//   border: 1px solid @tableBorder;
+// }
 
 @media (max-width: 767px) {
-  .side-by-side {
-    left: 20px;
-    padding-right: 40px;
-  }
+  // .side-by-side {
+  //   left: 20px;
+  //   padding-right: 40px;
+  // }
 }
