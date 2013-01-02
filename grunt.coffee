@@ -49,10 +49,10 @@ module.exports = (grunt) ->
           compress: true
 
     lint:
-      files: ["grunt.js", "common/**/*.js", "modules/**/*.js"]
+      files: ["grunt.js", "js/**/*.js"]
 
     watch:
-      files: ["modules/**/*.coffee", "modules/**/*.js", "common/**/*.js", "templates/**/*.js"]
+      files: ["app/**/*.coffee", "app/**/*.js"]
       tasks: "coffee build test"
 
 
