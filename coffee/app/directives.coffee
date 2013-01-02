@@ -6,11 +6,13 @@ aMarked.directive 'markdownProcessor', ->
       sanitize: true
       highlight: (code, lang) ->
         if lang and hljs.LANGUAGES[lang]
-          hl = hljs.highlight(lang, code)
+          hl = hljs.highlight(lang, code).value
+        else if lang and lang is "auto"
+          hl = hljs.highlightAuto(code).value
         else
-          hl = hljs.highlightAuto(code)
+          hl = code
 
-        hl.value
+        hl
 
     scope.$watch 'markdown', (md) ->
       scope.$emit 'markdownChange', md
@@ -23,9 +25,6 @@ aMarked.directive 'markdownPreview', ->
   link: (scope, elem, attrs) ->
     scope.$watch 'preview', (els) ->
       $(elem).empty().append(els)
-      # preCode = prev.find('pre')
-      # _.each preCode, (code) ->
-      #   hljs.highlightBlock(code)
 
 aMarked.directive 'dialogbox', ->
   {
@@ -154,3 +153,50 @@ aMarked.directive 'stickyScroll', ->
     scope.$watch ->
       scope.$eval exp
     , scrollItems
+
+aMarked.directive 'keyboardShortcuts', [
+  '$document'
+  ($document) ->
+    (scope, elem, attr) ->
+      mdTextarea = elem[0]
+
+      joinLines = ->
+        cursorPos = mdTextarea.selectionStart
+        return unless cursorPos
+
+        txtArr = mdTextarea.value.split('')
+        txtArr[cursorPos] = ""
+
+        finish = txtArr.length - cursorPos - 1
+        i = cursorPos
+
+        while i < finish
+          currentChar = txtArr[i]
+          if currentChar.match(/[ ]/i)
+            currentChar = ""
+          else
+            break
+          i++
+
+        mdTextarea.value = txtArr.join('')
+        mdTextarea.selectionStart = mdTextarea.selectionEnd = cursorPos
+        return
+
+      save = ->
+
+      cmdCtrl =
+        "74" : joinLines
+        "83" : save
+
+      ctrl = (e) ->
+        keyCode = e.keyCode.toString()
+
+        e.preventDefault() if keyCode in cmdCtrl
+
+        if cmdCtrl[keyCode]
+          cmdCtrl[keyCode].call(@)
+
+      $document.on 'keydown', (e) ->
+        if e.ctrlKey or e.metaKey
+          ctrl(e)
+]

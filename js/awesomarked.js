@@ -9,7 +9,8 @@ Copyright © 2012 Zodiac Pool Systems.
 All rights reserved.
 */
 
-var Stor, aMarked;
+var Stor, aMarked,
+  __indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i < l; i++) { if (i in this && this[i] === item) return i; } return -1; };
 
 jQuery.easing.jswing = jQuery.easing.swing;
 
@@ -268,11 +269,13 @@ aMarked.directive('markdownProcessor', function() {
         highlight: function(code, lang) {
           var hl;
           if (lang && hljs.LANGUAGES[lang]) {
-            hl = hljs.highlight(lang, code);
+            hl = hljs.highlight(lang, code).value;
+          } else if (lang && lang === "auto") {
+            hl = hljs.highlightAuto(code).value;
           } else {
-            hl = hljs.highlightAuto(code);
+            hl = code;
           }
-          return hl.value;
+          return hl;
         }
       };
       return scope.$watch('markdown', function(md) {
@@ -421,6 +424,57 @@ aMarked.directive('stickyScroll', function() {
     }, scrollItems);
   };
 });
+
+aMarked.directive('keyboardShortcuts', [
+  '$document', function($document) {
+    return function(scope, elem, attr) {
+      var cmdCtrl, ctrl, joinLines, mdTextarea, save;
+      mdTextarea = elem[0];
+      joinLines = function() {
+        var currentChar, cursorPos, finish, i, txtArr;
+        cursorPos = mdTextarea.selectionStart;
+        if (!cursorPos) {
+          return;
+        }
+        txtArr = mdTextarea.value.split('');
+        txtArr[cursorPos] = "";
+        finish = txtArr.length - cursorPos - 1;
+        i = cursorPos;
+        while (i < finish) {
+          currentChar = txtArr[i];
+          if (currentChar.match(/[ ]/i)) {
+            currentChar = "";
+          } else {
+            break;
+          }
+          i++;
+        }
+        mdTextarea.value = txtArr.join('');
+        mdTextarea.selectionStart = mdTextarea.selectionEnd = cursorPos;
+      };
+      save = function() {};
+      cmdCtrl = {
+        "74": joinLines,
+        "83": save
+      };
+      ctrl = function(e) {
+        var keyCode;
+        keyCode = e.keyCode.toString();
+        if (__indexOf.call(cmdCtrl, keyCode) >= 0) {
+          e.preventDefault();
+        }
+        if (cmdCtrl[keyCode]) {
+          return cmdCtrl[keyCode].call(this);
+        }
+      };
+      return $document.on('keydown', function(e) {
+        if (e.ctrlKey || e.metaKey) {
+          return ctrl(e);
+        }
+      });
+    };
+  }
+]);
 
 /* --------------------------------------------
      Begin filters.coffee
