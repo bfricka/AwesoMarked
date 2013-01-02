@@ -16,14 +16,14 @@ class Stor
 
 aMarked = angular.module 'aMarked', [] # Create our app
 
-#@codekit-append "directives.coffee"
-#import "directives.coffee"
+#@codekit-append "directives/directives.coffee"
+#import "directives/directives.coffee"
 
-#@codekit-append "filters.coffee"
-#import "filters.coffee"
+#@codekit-append "filters/filters.coffee"
+#import "filters/filters.coffee"
 
-#@codekit-append "services.coffee"
-#import "services.coffee"
+#@codekit-append "services/services.coffee"
+#import "services/services.coffee"
 
-#@codekit-append "controllers.coffee"
-#import "controllers.coffee"
+#@codekit-append "controllers/controllers.coffee"
+#import "controllers/controllers.coffee"

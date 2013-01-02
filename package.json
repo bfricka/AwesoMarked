@@ -1,0 +1,21 @@
+{
+  "author": "Brian Frichette",
+  "name": "AwesoMarked",
+  "description": "AwesoMarked - An awesome markdown editor",
+  "version": "0.0.1",
+  "homepage": "http://angular-ui.github.com",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/brian-frichette/AwesoMarked.git"
+  },
+  "engines": {
+    "node": ">= 0.8.4"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "grunt-recess": "~0.1.3",
+    "grunt-coffee": "~0.0.3",
+    "async": "0.1.x",
+    "testacular": "~0.4.0"
+  }
+}

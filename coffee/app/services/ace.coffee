@@ -1,14 +1,14 @@
-Ace.factory "VimHandler", ->
+aMarked.factory "VimHandler", ->
   ace.require("ace/keyboard/vim").handler
 
-Ace.factory "EmacsHandler", ->
+aMarked.factory "EmacsHandler", ->
   ace.require("ace/keyboard/emacs").handler
 
-Ace.factory "ace", ->
+aMarked.factory "ace", ->
   ace.edit "editor"
 
-Ace.factory "AceRange", ->
+aMarked.factory "AceRange", ->
   ace.require("ace/range").Range
 
-Ace.factory "EditSession", ->
+aMarked.factory "EditSession", ->
   ace.require("ace/edit_session").EditSession
