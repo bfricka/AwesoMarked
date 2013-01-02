@@ -10,7 +10,13 @@ module.exports = (grunt) ->
     builddir: "build"
     pkg: "<json:package.json>"
     meta:
-      banner: "/**\n" + " * <%= pkg.description %>\n" + " * @version v<%= pkg.version %> - " + "<%= grunt.template.today(\"yyyy-mm-dd\") %>\n" + " * @link <%= pkg.homepage %>\n" + " * @license MIT License, http://www.opensource.org/licenses/MIT\n" + " */"
+      banner: "/**\n" +
+      " * <%= pkg.description %>\n" +
+      " * @version v<%= pkg.version %> - " +
+      "<%= grunt.template.today(\"yyyy-mm-dd\") %>\n" +
+      " * @link <%= pkg.homepage %>\n" +
+      " * @license MIT License, http://www.opensource.org/licenses/MIT\n" +
+      " */"
 
     coffee:
       build:
@@ -22,18 +28,10 @@ module.exports = (grunt) ->
         src: ["<banner:meta.banner>", "common/*.js"]
         dest: "<%= builddir %>/<%= pkg.name %>.js"
 
-      ieshiv:
-        src: ["<banner:meta.banner>", "common/ieshiv/*.js"]
-        dest: "<%= builddir %>/<%= pkg.name %>-ieshiv.js"
-
     min:
       build:
         src: ["<banner:meta.banner>", "<config:concat.build.dest>"]
         dest: "<%= builddir %>/<%= pkg.name %>.min.js"
-
-      ieshiv:
-        src: ["<banner:meta.banner>", "<config:concat.ieshiv.dest>"]
-        dest: "<%= builddir %>/<%= pkg.name %>-ieshiv.min.js"
 
     recess:
       build:
@@ -58,7 +56,7 @@ module.exports = (grunt) ->
 
   # Default task.
   grunt.registerTask "default", "coffee build test"
-  grunt.registerTask "build", "build all or some of the angular-ui modules", ->
+  grunt.registerTask "build", "build all of AwesoMarked", ->
     jsBuildFiles = grunt.config("concat.build.src")
     lessBuildFiles = []
     if @args.length > 0
